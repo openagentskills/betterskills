@@ -36,6 +36,9 @@ categories:
   - id: data
     name: Data & Analytics
     description: Spreadsheets, metrics, and analysis
+  - id: lifestyle
+    name: Lifestyle
+    description: Cooking, home, travel, and everyday planning
 
 skills:
   - id: code-review
@@ -97,6 +100,12 @@ skills:
     category: data
     kind: hybrid
     maturity: stable
+
+  - id: recipe-scaler
+    path: skills/lifestyle/recipe-scaler
+    category: lifestyle
+    kind: non-engineering
+    maturity: draft
 
   - id: sql-query-review
     path: skills/data/sql-query-review
