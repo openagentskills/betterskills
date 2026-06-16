@@ -60,21 +60,26 @@ Ask the user if the motivation or ticket number is not obvious from the code.
 ## Section guidance
 
 ### Summary
+
 - Lead with the user-facing or business impact, not the implementation.
 - Bad: "Refactored auth middleware to use JWT."
 - Good: "Replaces session cookies with JWT tokens so users stay logged in across devices."
 
 ### Changes
+
 - One bullet per logical change, not per file.
 - Omit trivial formatting or dependency bumps unless they're the point of the PR.
 
 ### Test plan
+
 - Each item should be a concrete action + expected outcome.
 - Include: happy path, key edge cases, regression risk areas.
 - Example: `[ ] Log in with expired token → redirected to /login with error message`
 
 ### Breaking changes
+
 Flag any of these:
+
 - Deleted or renamed public API endpoints, functions, or types
 - Changed default behaviour or config key names
 - Database schema changes requiring migration
