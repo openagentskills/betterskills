@@ -47,6 +47,12 @@ skills:
     kind: engineering
     maturity: stable
 
+  - id: pull-request-description
+    path: skills/engineering/pull-request-description
+    category: engineering.git
+    kind: engineering
+    maturity: draft
+
   - id: conventional-commits
     path: skills/engineering/conventional-commits
     category: engineering.git
