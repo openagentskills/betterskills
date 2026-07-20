@@ -111,4 +111,8 @@ skills:
     path: skills/lifestyle/declutter-plan
     category: lifestyle
     kind: non-engineering
+  - id: metrics-dashboard-spec
+    path: skills/data/metrics-dashboard-spec
+    category: data
+    kind: hybrid
     maturity: draft

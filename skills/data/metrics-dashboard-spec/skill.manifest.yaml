@@ -1,0 +1,20 @@
+id: metrics-dashboard-spec
+version: 1.0.0
+category: data
+kind: hybrid
+maturity: draft
+tags:
+  - metrics
+  - dashboard
+  - analytics
+  - kpi
+  - data
+platforms:
+  cursor:
+    install:
+      type: copy
+      target: .cursor/skills/metrics-dashboard-spec
+  claude-code:
+    install:
+      type: copy
+      target: .claude/skills/metrics-dashboard-spec
