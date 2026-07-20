@@ -86,6 +86,7 @@ Round to the nearest practical unit (e.g. 2.5 tsp not 2.47 tsp). Flag when an in
 | … | … | … |
 
 ### Technique notes
+
 - [Any pan, time, or leavening adjustments]
 
 ---
