@@ -1,0 +1,19 @@
+id: pull-request-description
+version: 1.0.0
+category: engineering.git
+kind: engineering
+maturity: draft
+tags:
+  - pull-request
+  - git
+  - documentation
+  - review
+platforms:
+  cursor:
+    install:
+      type: copy
+      target: .cursor/skills/pull-request-description
+  claude-code:
+    install:
+      type: copy
+      target: .claude/skills/pull-request-description
