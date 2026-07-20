@@ -82,6 +82,12 @@ skills:
     kind: non-engineering
     maturity: stable
 
+  - id: standup-update
+    path: skills/productivity/standup-update
+    category: productivity
+    kind: non-engineering
+    maturity: draft
+
   - id: professional-email
     path: skills/communication/professional-email
     category: communication

@@ -1,0 +1,18 @@
+id: standup-update
+version: 1.0.0
+category: productivity
+kind: non-engineering
+maturity: draft
+tags:
+  - standup
+  - daily-update
+  - slack
+platforms:
+  cursor:
+    install:
+      type: copy
+      target: .cursor/skills/standup-update
+  claude-code:
+    install:
+      type: copy
+      target: .claude/skills/standup-update

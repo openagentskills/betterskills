@@ -40,6 +40,7 @@ See [docs/platforms.md](docs/platforms.md) for install paths and adapters.
 | [security-review](skills/engineering/security-review/) | Security | Engineering |
 | [systematic-debugging](skills/engineering/systematic-debugging/) | Debugging | Engineering |
 | [meeting-notes](skills/productivity/meeting-notes/) | Productivity | Non-engineering |
+| [standup-update](skills/productivity/standup-update/) | Productivity | Non-engineering |
 | [professional-email](skills/communication/professional-email/) | Communication | Non-engineering |
 | [research-synthesis](skills/research/research-synthesis/) | Research | Non-engineering |
 | [technical-writing](skills/documentation/technical-writing/) | Documentation | Hybrid |
