@@ -87,7 +87,7 @@ Details: [docs/portability.md](docs/portability.md)
 
 We welcome new skills, platform adapters, and translations. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-**Want to add a skill?** Browse [open skill build issues](https://github.com/shahravir/betterskills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) or start from the [contributor hub](https://github.com/shahravir/betterskills/issues/17).
+**Want to add a skill?** Browse [open skill build issues](https://github.com/openagentskills/betterskills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) or start from the [contributor hub](https://github.com/openagentskills/betterskills/issues/17).
 
 ```bash
 ./scripts/validate.sh   # run before opening a PR
