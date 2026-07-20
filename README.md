@@ -36,6 +36,7 @@ See [docs/platforms.md](docs/platforms.md) for install paths and adapters.
 |-------|----------|------|
 | [code-review](skills/engineering/code-review/) | Development | Engineering |
 | [conventional-commits](skills/engineering/conventional-commits/) | Git | Engineering |
+| [pull-request-description](skills/engineering/pull-request-description/) | Git | Engineering |
 | [rest-api-design](skills/engineering/rest-api-design/) | Architecture | Engineering |
 | [security-review](skills/engineering/security-review/) | Security | Engineering |
 | [systematic-debugging](skills/engineering/systematic-debugging/) | Debugging | Engineering |
