@@ -4,9 +4,10 @@ category: engineering.git
 kind: engineering
 maturity: draft
 tags:
-  - git
   - pull-request
-  - changelog
+  - git
+  - documentation
+  - review
 platforms:
   cursor:
     install:

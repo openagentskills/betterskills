@@ -1,100 +1,123 @@
 ---
 name: pull-request-description
 description: >-
-  Turns a branch diff, commit list, or change summary into a clear pull request
-  description with summary, motivation, test plan, and breaking changes. Use when
-  the user asks to write a PR description, summarize a diff for reviewers, or
-  generate a test plan section for a pull request.
+  Turns a branch diff or commit list into a clear pull request description with
+  summary, motivation, test plan, and breaking changes. Use when the user says
+  "write a PR description", "summarize this diff for reviewers", or "generate
+  a PR body".
 ---
 
 # Pull Request Description Writer
 
 ## Quick start
 
-1. Gather context: `git log`, `git diff` against the base branch, and any linked issues.
-2. Infer the user-facing goal — not just file names or commit subjects.
-3. Group changes into themes (feature, fix, refactor, docs, etc.).
-4. Fill the output template; omit sections that do not apply.
+1. Get the diff or commit list (`git diff main...HEAD` or `git log main..HEAD --oneline`).
+2. Identify: what changed, why, and any risks.
+3. Fill the template below. Skip sections that genuinely don't apply.
 
-## Workflow
+## How to gather context
 
-1. **Identify base branch** — Usually `main` or `master`; confirm if unclear.
-2. **Read commits** — `git log <base>...HEAD --oneline` for narrative arc.
-3. **Read the diff** — `git diff <base>...HEAD` for concrete behavior changes.
-4. **Extract motivation** — Why now? What problem does this solve?
-5. **Draft test plan** — Concrete steps a reviewer can follow.
-6. **Flag breaking changes** — API removals, migrations, config changes, env vars.
-7. **Link issues** — `Fixes #123`, `Relates to #456`, or manual references.
+```bash
+# Commits on this branch
+git log main..HEAD --oneline
 
-## Output format
+# Full diff
+git diff main...HEAD
+
+# Files changed
+git diff main...HEAD --name-status
+```
+
+Ask the user if the motivation or ticket number is not obvious from the code.
+
+## Output template
 
 ```markdown
 ## Summary
-[1–3 sentences: what changed and why it matters to users or reviewers]
+<!-- 2–4 sentences. What this PR does and why. The "why" matters most. -->
 
 ## Changes
-- [Themed bullet: user-visible or architectural change]
-- [Another grouped change]
+<!-- Bulleted list of the significant changes. Group by area if large. -->
+- 
+- 
 
 ## Test plan
-- [ ] [Concrete step a reviewer can run]
-- [ ] [Edge case or regression check]
+<!-- How a reviewer can verify this works. Be specific — "it works" is not a test plan. -->
+- [ ] 
+- [ ] 
 
-## Screenshots
-[Optional — UI changes only; omit section if not applicable]
+## Screenshots / recordings
+<!-- Delete this section if no UI changes. -->
 
 ## Breaking changes
-[Optional — omit section if none]
-- [What broke, who is affected, migration steps]
+<!-- List any removed APIs, renamed fields, changed defaults, or migration steps.
+     Delete if none. -->
 
-## Related issues
-Fixes #NNN
+## Related issues / tickets
+<!-- Closes #123, Fixes #456, or N/A -->
 ```
 
-## Writing rules
+## Section guidance
 
-- **Summary** — Lead with outcome, not implementation ("Add rate limiting" not "Update middleware file").
-- **Changes** — Group by theme; avoid one bullet per commit unless commits are unrelated.
-- **Test plan** — Checkboxes with verifiable steps; mention commands, URLs, or fixtures.
-- **Breaking changes** — Be explicit about upgrade paths and defaults.
-- **Tone** — Professional, concise; no filler ("This PR updates some files").
+### Summary
+
+- Lead with the user-facing or business impact, not the implementation.
+- Bad: "Refactored auth middleware to use JWT."
+- Good: "Replaces session cookies with JWT tokens so users stay logged in across devices."
+
+### Changes
+
+- One bullet per logical change, not per file.
+- Omit trivial formatting or dependency bumps unless they're the point of the PR.
+
+### Test plan
+
+- Each item should be a concrete action + expected outcome.
+- Include: happy path, key edge cases, regression risk areas.
+- Example: `[ ] Log in with expired token → redirected to /login with error message`
+
+### Breaking changes
+
+Flag any of these:
+
+- Deleted or renamed public API endpoints, functions, or types
+- Changed default behaviour or config key names
+- Database schema changes requiring migration
+- Environment variable additions that are required (not optional)
+
+## Quality checks before submitting
+
+- [ ] Title is `<type>: <short imperative description>` (≤72 chars)
+- [ ] Summary explains the *why*, not just the *what*
+- [ ] Test plan has at least one checkable item
+- [ ] Breaking changes section present if any exist
+- [ ] Related issue linked
 
 ## Example
 
-**Input** — Commits on branch `feat/auth-jwt`:
+**Input:** three commits — "add rate limiting middleware", "wire middleware to /api routes", "add tests for rate limiter"
 
-```
-a1b2c3d fix typo in login handler
-d4e5f6g add jwt middleware
-g7h8i9j update readme
-j0k1l2m wip tests
-```
-
-**Diff highlights** — New `POST /login`, JWT validation middleware, removed session cookies.
-
-**Output**
+**Output:**
 
 ```markdown
 ## Summary
-Add JWT-based authentication for API clients, replacing cookie sessions on
-public API routes. Enables stateless integration for mobile and third-party apps.
+Adds per-IP rate limiting to all `/api` routes (100 req/min). Prevents
+abuse and reduces load on downstream services during traffic spikes.
 
 ## Changes
-- Add `POST /login` endpoint issuing signed JWT access tokens
-- Add JWT validation middleware for protected routes
-- Remove session-cookie auth from API handlers (web UI unchanged)
-- Document auth flow and token refresh in README
+- New `rateLimiter` middleware using an in-memory sliding window
+- Applied to all routes under `/api/*`
+- Unit tests covering limit enforcement and header values
 
 ## Test plan
-- [ ] `curl -X POST /login` with valid credentials returns a JWT
-- [ ] Protected route returns 401 without token, 200 with valid token
-- [ ] Expired token returns 401 with clear error message
-- [ ] Existing web session login still works in browser
+- [ ] Send 101 requests in 60 s → 101st returns `429 Too Many Requests`
+- [ ] Response includes `Retry-After` and `X-RateLimit-*` headers
+- [ ] Routes outside `/api` are unaffected
 
 ## Breaking changes
-- API clients using session cookies must switch to JWT bearer tokens
-- `Authorization: Bearer <token>` header is now required on protected API routes
+- Clients hitting the API in tight loops will now receive `429` errors.
+  Add exponential back-off on the client side.
 
-## Related issues
-Fixes #42
+## Related issues / tickets
+Closes #87
 ```

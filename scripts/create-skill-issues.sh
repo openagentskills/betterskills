@@ -2,7 +2,7 @@
 # One-off helper to seed contributor skill issues. Safe to re-run only on empty issue tracker.
 set -euo pipefail
 
-REPO="shahravir/betterskills"
+REPO="openagentskills/betterskills"
 
 FOOTER=$(cat <<'EOF'
 
@@ -11,12 +11,12 @@ FOOTER=$(cat <<'EOF'
 ## How to contribute
 
 1. Comment on this issue if you want to work on it (avoids duplicate PRs).
-2. Read [CONTRIBUTING.md](https://github.com/shahravir/betterskills/blob/main/CONTRIBUTING.md) and [docs/authoring.md](https://github.com/shahravir/betterskills/blob/main/docs/authoring.md).
-3. Copy [skills/_template/](https://github.com/shahravir/betterskills/tree/main/skills/_template) into the right `skills/<domain>/` folder.
-4. Register the skill in [catalogue.yaml](https://github.com/shahravir/betterskills/blob/main/catalogue.yaml) with `maturity: draft` until reviewed.
+2. Read [CONTRIBUTING.md](https://github.com/openagentskills/betterskills/blob/main/CONTRIBUTING.md) and [docs/authoring.md](https://github.com/openagentskills/betterskills/blob/main/docs/authoring.md).
+3. Copy [skills/_template/](https://github.com/openagentskills/betterskills/tree/main/skills/_template) into the right `skills/<domain>/` folder.
+4. Register the skill in [catalogue.yaml](https://github.com/openagentskills/betterskills/blob/main/catalogue.yaml) with `maturity: draft` until reviewed.
 5. Run `./scripts/validate.sh` and open a PR referencing this issue.
 
-**Not listed here?** Open a [new skill proposal](https://github.com/shahravir/betterskills/issues/new?template=new-skill.yml) with your idea.
+**Not listed here?** Open a [new skill proposal](https://github.com/openagentskills/betterskills/issues/new?template=new-skill.yml) with your idea.
 EOF
 )
 
@@ -80,7 +80,7 @@ Add a skill for **accessibility reviews** of UI changes: WCAG-oriented checklist
 | **Category** | `engineering.development` |
 | **Kind** | `engineering` |
 
-Cover: semantic HTML, ARIA misuse, focus management, contrast, motion, forms/errors. Align tone with existing [code-review](https://github.com/shahravir/betterskills/tree/main/skills/engineering/code-review) skill.
+Cover: semantic HTML, ARIA misuse, focus management, contrast, motion, forms/errors. Align tone with existing [code-review](https://github.com/openagentskills/betterskills/tree/main/skills/engineering/code-review) skill.
 
 ## Acceptance criteria
 
@@ -226,7 +226,7 @@ Add a skill that turns raw notes into a concise **standup update**: yesterday, t
 | **Category** | `productivity` |
 | **Kind** | `non-engineering` |
 
-Pair well with existing [meeting-notes](https://github.com/shahravir/betterskills/tree/main/skills/productivity/meeting-notes) skill.
+Pair well with existing [meeting-notes](https://github.com/openagentskills/betterskills/tree/main/skills/productivity/meeting-notes) skill.
 
 ## Acceptance criteria
 
@@ -434,7 +434,7 @@ Add a skill to define **metrics and dashboard specs**: questions to answer, metr
 | **Category** | `data` |
 | **Kind** | `hybrid` |
 
-Complements [spreadsheet-analysis](https://github.com/shahravir/betterskills/tree/main/skills/data/spreadsheet-analysis).
+Complements [spreadsheet-analysis](https://github.com/openagentskills/betterskills/tree/main/skills/data/spreadsheet-analysis).
 
 ## Acceptance criteria
 
