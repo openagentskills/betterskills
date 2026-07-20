@@ -36,10 +36,12 @@ See [docs/platforms.md](docs/platforms.md) for install paths and adapters.
 |-------|----------|------|
 | [code-review](skills/engineering/code-review/) | Development | Engineering |
 | [conventional-commits](skills/engineering/conventional-commits/) | Git | Engineering |
+| [pull-request-description](skills/engineering/pull-request-description/) | Git | Engineering |
 | [rest-api-design](skills/engineering/rest-api-design/) | Architecture | Engineering |
 | [security-review](skills/engineering/security-review/) | Security | Engineering |
 | [systematic-debugging](skills/engineering/systematic-debugging/) | Debugging | Engineering |
 | [meeting-notes](skills/productivity/meeting-notes/) | Productivity | Non-engineering |
+| [standup-update](skills/productivity/standup-update/) | Productivity | Non-engineering |
 | [professional-email](skills/communication/professional-email/) | Communication | Non-engineering |
 | [research-synthesis](skills/research/research-synthesis/) | Research | Non-engineering |
 | [technical-writing](skills/documentation/technical-writing/) | Documentation | Hybrid |
@@ -87,7 +89,7 @@ Details: [docs/portability.md](docs/portability.md)
 
 We welcome new skills, platform adapters, and translations. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-**Want to add a skill?** Browse [open skill build issues](https://github.com/shahravir/betterskills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) or start from the [contributor hub](https://github.com/shahravir/betterskills/issues/17).
+**Want to add a skill?** Browse [open skill build issues](https://github.com/openagentskills/betterskills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) or start from the [contributor hub](https://github.com/openagentskills/betterskills/issues/17).
 
 ```bash
 ./scripts/validate.sh   # run before opening a PR

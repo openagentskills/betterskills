@@ -1,0 +1,19 @@
+id: recipe-scaler
+version: 1.0.0
+category: lifestyle
+kind: non-engineering
+maturity: draft
+tags:
+  - cooking
+  - recipes
+  - food
+  - scaling
+platforms:
+  cursor:
+    install:
+      type: copy
+      target: .cursor/skills/recipe-scaler
+  claude-code:
+    install:
+      type: copy
+      target: .claude/skills/recipe-scaler

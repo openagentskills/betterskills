@@ -5,9 +5,10 @@ kind: engineering
 maturity: draft
 tags:
   - pull-request
-  - documentation
-  - git
   - collaboration
+  - git
+  - documentation
+  - review
 platforms:
   cursor:
     install:
