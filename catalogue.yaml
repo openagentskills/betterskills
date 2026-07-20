@@ -103,3 +103,9 @@ skills:
     category: data
     kind: engineering
     maturity: draft
+
+  - id: metrics-dashboard-spec
+    path: skills/data/metrics-dashboard-spec
+    category: data
+    kind: hybrid
+    maturity: draft
