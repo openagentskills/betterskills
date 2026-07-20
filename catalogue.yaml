@@ -36,6 +36,9 @@ categories:
   - id: data
     name: Data & Analytics
     description: Spreadsheets, metrics, and analysis
+  - id: lifestyle
+    name: Lifestyle
+    description: Home, routines, and everyday life organization
 
 skills:
   - id: code-review
@@ -104,6 +107,10 @@ skills:
     kind: engineering
     maturity: draft
 
+  - id: declutter-plan
+    path: skills/lifestyle/declutter-plan
+    category: lifestyle
+    kind: non-engineering
   - id: metrics-dashboard-spec
     path: skills/data/metrics-dashboard-spec
     category: data
