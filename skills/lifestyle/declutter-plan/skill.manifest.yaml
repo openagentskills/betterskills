@@ -1,0 +1,19 @@
+id: declutter-plan
+version: 1.0.0
+category: lifestyle
+kind: non-engineering
+maturity: draft
+tags:
+  - declutter
+  - organization
+  - home
+  - cleaning
+platforms:
+  cursor:
+    install:
+      type: copy
+      target: .cursor/skills/declutter-plan
+  claude-code:
+    install:
+      type: copy
+      target: .claude/skills/declutter-plan
