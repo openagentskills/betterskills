@@ -49,6 +49,7 @@ Round to the nearest practical unit (e.g. 2.5 tsp not 2.47 tsp). Flag when an in
 
 > **Missing:** [ingredient]
 > **Substitutes:**
+>
 > 1. [Best sub] — [ratio] — [caveat]
 > 2. [Second option] — [ratio] — [caveat]
 
@@ -112,6 +113,7 @@ Round to the nearest practical unit (e.g. 2.5 tsp not 2.47 tsp). Flag when an in
 | Salt (pasta water) | 1 tbsp | 2 tbsp |
 
 **Technique notes:**
+
 - Cook pasta in two large pots to maintain a rolling boil.
 - Work in batches when tossing off heat — carbonara seizes if the pan cools too fast.
 - Salt at 75 % of scaled amount and adjust.
