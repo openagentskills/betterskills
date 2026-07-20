@@ -104,6 +104,8 @@ Round to the nearest practical unit (e.g. 2.5 tsp not 2.47 tsp). Flag when an in
 
 **Multiplier:** 10 ÷ 4 = 2.5×
 
+### Ingredients
+
 | Ingredient | Original | Scaled |
 |------------|----------|--------|
 | Spaghetti | 400 g | 1 kg |
@@ -113,7 +115,7 @@ Round to the nearest practical unit (e.g. 2.5 tsp not 2.47 tsp). Flag when an in
 | Black pepper | 1 tsp | 2 tsp (taste first) |
 | Salt (pasta water) | 1 tbsp | 2 tbsp |
 
-**Technique notes:**
+### Technique notes
 
 - Cook pasta in two large pots to maintain a rolling boil.
 - Work in batches when tossing off heat — carbonara seizes if the pan cools too fast.
